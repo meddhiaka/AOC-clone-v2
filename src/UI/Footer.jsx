@@ -195,6 +195,9 @@ export default function Footer() {
             <img src={stb} className='w-11' alt='' />
           </li>
         </ul>
+        <p className='text-sm mt-10 text-gray-500 sm:text-center dark:text-gray-400'>
+          © 2023 AOC . All Rights Reserved.
+        </p>
       </div>
     </footer>
   );
