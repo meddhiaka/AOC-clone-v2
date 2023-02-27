@@ -30,7 +30,7 @@ export default function Navbar() {
           </svg>
         </button>
         <div className='hidden w-full md:block md:w-auto' id='navbar-solid-bg'>
-          <ul className='flex flex-col mt-4 rounded-lg bg-gray-400  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent'>
+          <ul className='flex flex-col mt-4 rounded-lg bg-gray-900  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent'>
             <li>
               <a
                 href='#'
