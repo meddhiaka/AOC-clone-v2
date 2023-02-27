@@ -2,7 +2,7 @@ import Logo from './../assets/aocLogo.png';
 
 export default function Navbar() {
   return (
-    <nav className='p-3 border-gray-200 bg-gray-500 dark:bg-gray-800 dark:border-gray-700'>
+    <nav className='p-3 border-gray-200 bg-gray-800  '>
       <div className='container flex flex-wrap items-center justify-between mx-auto'>
         <a href='#' className='flex items-center'>
           <img src={Logo} className='h-6 mr-3 sm:h-14' alt='AOC Logo' />
@@ -10,7 +10,7 @@ export default function Navbar() {
         <button
           data-collapse-toggle='navbar-solid-bg'
           type='button'
-          className='inline-flex items-center p-2 ml-3 text-sm text-gray-100 rounded-lg md:hidden hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+          className='inline-flex items-center p-2 ml-3 text-sm text-gray-100 rounded-lg md:hidden hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200   '
           aria-controls='navbar-solid-bg'
           aria-expanded='false'
         >
@@ -43,7 +43,7 @@ export default function Navbar() {
             <li>
               <a
                 href='#'
-                className='block text-base py-2 pl-3 pr-4 text-gray-50 rounded hover:bg-yellow-500 md:hover:bg-gray-500 md:border-0 md:hover:text-yellow-400 md:p-0 '
+                className='block text-base py-2 pl-3 pr-4 text-gray-50 rounded hover:bg-yellow-500 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0 '
               >
                 About
               </a>
