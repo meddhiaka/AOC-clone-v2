@@ -4,7 +4,7 @@ import Footer from './UI/Footer';
 import MainVideo from './UI/MainVideo';
 import Navbar from './UI/Navbar';
 
-function App() {
+export default function App() {
   return (
     <div>
       <Navbar />
@@ -14,5 +14,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
