@@ -1,10 +1,12 @@
 import './App.css';
+import MainVideo from './UI/MainVideo';
 import Navbar from './UI/Navbar';
 
 function App() {
   return (
-    <div className='App'>
+    <div>
       <Navbar />
+      <MainVideo />
     </div>
   );
 }
