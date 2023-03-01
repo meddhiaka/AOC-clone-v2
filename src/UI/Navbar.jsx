@@ -2,6 +2,7 @@ import Logo from './../assets/aocLogo.png';
 import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -36,13 +37,13 @@ export default function Navbar() {
                 </div>
                 <div className='hidden sm:ml-6 sm:block'>
                   <div className='flex space-x-4'>
-                    <a
-                      href='#'
+                    <Link
+                      to='/'
                       class='text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
                       aria-current='page'
                     >
                       Home
-                    </a>
+                    </Link>
 
                     <a
                       href='#'
@@ -51,12 +52,12 @@ export default function Navbar() {
                       About
                     </a>
 
-                    <a
-                      href='#'
+                    <Link
+                      to='/team'
                       class='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
                     >
                       Team
-                    </a>
+                    </Link>
 
                     <a
                       href='#'
@@ -78,13 +79,13 @@ export default function Navbar() {
 
           <Disclosure.Panel className='sm:hidden'>
             <div className='space-y-1 px-2 pt-2 pb-3'>
-              <a
-                href='#'
+              <Link
+                to='/'
                 class='bg-yellow-500 text-white block rounded-md px-3 py-2 text-base font-medium'
                 aria-current='page'
               >
                 Home
-              </a>
+              </Link>
 
               <a
                 href='#'
@@ -93,12 +94,12 @@ export default function Navbar() {
                 About
               </a>
 
-              <a
-                href='#'
+              <Link
+                to='/team'
                 class='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 Team
-              </a>
+              </Link>
 
               <a
                 href='#'
