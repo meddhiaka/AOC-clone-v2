@@ -1,80 +1,122 @@
 import Logo from './../assets/aocLogo.png';
+import React from 'react';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 export default function Navbar() {
   return (
-    <nav className='p-3 border-gray-200 bg-gray-800  '>
-      <div className='container flex flex-wrap items-center justify-between mx-auto'>
-        <a href='#' className='flex items-center'>
-          <img src={Logo} className='h-6 mr-3 sm:h-14' alt='AOC Logo' />
-        </a>
-        <button
-          data-collapse-toggle='navbar-solid-bg'
-          type='button'
-          className='inline-flex items-center p-2 ml-3 text-sm text-gray-100 rounded-lg md:hidden hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200   '
-          aria-controls='navbar-solid-bg'
-          aria-expanded='false'
-        >
-          <span className='sr-only'>Open main menu</span>
-          <svg
-            className='w-6 h-6'
-            aria-hidden='true'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path
-              fillRule='evenodd'
-              d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
-              clipRule='evenodd'
-            ></path>
-          </svg>
-        </button>
-        <div className='hidden w-full md:block md:w-auto' id='navbar-solid-bg'>
-          <ul className='flex flex-col mt-4 rounded-lg bg-gray-900  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent'>
-            <li>
+    <Disclosure as='nav' className='bg-gray-800'>
+      {({ open }) => (
+        <>
+          <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
+            <div className='relative flex h-16 items-center justify-between'>
+              <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
+                {/* Mobile menu button*/}
+                <Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
+                  <span className='sr-only'>Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className='block h-6 w-6' aria-hidden='true' />
+                  ) : (
+                    <Bars3Icon className='block h-6 w-6' aria-hidden='true' />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
+                <div className='flex flex-shrink-0 items-center'>
+                  <img
+                    className='block h-8 w-auto lg:hidden'
+                    src={Logo}
+                    alt='Your Company'
+                  />
+                  <img
+                    className='hidden h-8 w-auto lg:block'
+                    src={Logo}
+                    alt='Your Company'
+                  />
+                </div>
+                <div className='hidden sm:ml-6 sm:block'>
+                  <div className='flex space-x-4'>
+                    <a
+                      href='#'
+                      class='text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                      aria-current='page'
+                    >
+                      Home
+                    </a>
+
+                    <a
+                      href='#'
+                      class='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                    >
+                      About
+                    </a>
+
+                    <a
+                      href='#'
+                      class='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                    >
+                      Team
+                    </a>
+
+                    <a
+                      href='#'
+                      class='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                    >
+                      Events
+                    </a>
+                    <a
+                      href='#'
+                      class='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Disclosure.Panel className='sm:hidden'>
+            <div className='space-y-1 px-2 pt-2 pb-3'>
               <a
                 href='#'
-                className='block text-base py-2 pl-3 pr-4 text-gray-100 bg-yellow-500 rounded md:bg-transparent md:text-yellow-300 md:p-0'
+                class='bg-yellow-500 text-white block rounded-md px-3 py-2 text-base font-medium'
                 aria-current='page'
               >
                 Home
               </a>
-            </li>
-            <li>
+
               <a
                 href='#'
-                className='block text-base py-2 pl-3 pr-4 text-gray-50 rounded hover:bg-yellow-500 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0 '
+                class='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 About
               </a>
-            </li>
-            <li>
+
               <a
                 href='#'
-                className='block text-base py-2 pl-3 pr-4 text-gray-50 rounded hover:bg-yellow-500 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0 '
+                class='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 Team
               </a>
-            </li>
-            <li>
+
               <a
                 href='#'
-                className='block text-base py-2 pl-3 pr-4 text-gray-50 rounded hover:bg-yellow-500 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0 '
+                class='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 Events
               </a>
-            </li>
-            <li>
+
               <a
                 href='#'
-                className='block text-base py-2 pl-3 pr-4 text-gray-50 rounded hover:bg-yellow-500 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0 '
+                class='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 Contact
               </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
   );
 }
