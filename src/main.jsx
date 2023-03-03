@@ -4,6 +4,7 @@ import App from './App';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Team from './UI/Team';
+import Contact from './UI/Contact';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: '/team',
     element: <Team />,
+  },
+  {
+    path: '/contact',
+    element: <Contact />,
   },
 ]);
 

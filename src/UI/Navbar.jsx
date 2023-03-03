@@ -65,12 +65,12 @@ export default function Navbar() {
                     >
                       Events
                     </a>
-                    <a
-                      href='#'
+                    <Link
+                      to='/contact'
                       class='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
                     >
                       Contact
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -108,12 +108,12 @@ export default function Navbar() {
                 Events
               </a>
 
-              <a
-                href='#'
+              <Link
+                to='/contact'
                 class='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </Disclosure.Panel>
         </>
