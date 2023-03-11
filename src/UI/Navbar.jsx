@@ -39,7 +39,7 @@ export default function Navbar() {
                   <div className='flex space-x-4'>
                     <Link
                       to='/'
-                      class='text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                      className='text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
                       aria-current='page'
                     >
                       Home
@@ -47,27 +47,27 @@ export default function Navbar() {
 
                     <a
                       href='#'
-                      class='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                      className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
                     >
                       About
                     </a>
 
                     <Link
                       to='/team'
-                      class='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                      className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
                     >
                       Team
                     </Link>
 
                     <a
                       href='#'
-                      class='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                      className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
                     >
                       Events
                     </a>
                     <Link
                       to='/contact'
-                      class='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                      className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
                     >
                       Contact
                     </Link>
@@ -81,7 +81,7 @@ export default function Navbar() {
             <div className='space-y-1 px-2 pt-2 pb-3'>
               <Link
                 to='/'
-                class='bg-yellow-500 text-white block rounded-md px-3 py-2 text-base font-medium'
+                className='bg-yellow-500 text-white block rounded-md px-3 py-2 text-base font-medium'
                 aria-current='page'
               >
                 Home
@@ -89,28 +89,28 @@ export default function Navbar() {
 
               <a
                 href='#'
-                class='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
+                className='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 About
               </a>
 
               <Link
                 to='/team'
-                class='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
+                className='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 Team
               </Link>
 
               <a
                 href='#'
-                class='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
+                className='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 Events
               </a>
 
               <Link
                 to='/contact'
-                class='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
+                className='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 Contact
               </Link>
