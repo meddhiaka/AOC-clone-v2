@@ -1,4 +1,5 @@
 import Home from './../assets/Home.jpg';
+import { Link } from 'react-router-dom';
 
 export default function FAQ() {
   return (
@@ -33,7 +34,9 @@ export default function FAQ() {
                 className='flex items-center justify-end font-bold text-gray-200'
                 href='#'
               >
-                <span>Discover our team story</span>
+                <Link to='/about'>
+                  <span>Discover our team story</span>
+                </Link>
                 <span className='ml-5'>
                   <svg
                     width='19'

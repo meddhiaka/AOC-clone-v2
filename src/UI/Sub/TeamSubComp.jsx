@@ -22,7 +22,7 @@ export default function TeamSubComp() {
   return (
     <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
       <div className='mb-16 max-w-xl mx-auto text-center'>
-        <span className='inline-block mb-2 text-sm text-blue-500 font-bold uppercase tracking-widest'>
+        <span className='inline-block mb-2 text-sm text-yellow-500 font-bold uppercase tracking-widest'>
           Our team
         </span>
         <h2 className='font-heading text-4xl md:text-5xl text-gray-900 font-black tracking-tight'>

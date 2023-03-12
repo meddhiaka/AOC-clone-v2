@@ -45,12 +45,12 @@ export default function Navbar() {
                       Home
                     </Link>
 
-                    <a
-                      href='#'
+                    <Link
+                      to='/about'
                       className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
                     >
                       About
-                    </a>
+                    </Link>
 
                     <Link
                       to='/team'
@@ -87,12 +87,12 @@ export default function Navbar() {
                 Home
               </Link>
 
-              <a
-                href='#'
+              <Link
+                to='/about'
                 className='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 About
-              </a>
+              </Link>
 
               <Link
                 to='/team'
