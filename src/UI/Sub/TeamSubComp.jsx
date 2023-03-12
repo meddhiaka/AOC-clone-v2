@@ -10,8 +10,9 @@ export default function TeamSubComp() {
         accessToken: import.meta.env.VITE_CONTENTFUL_PRIVATE_API_KEY,
       });
 
-      const contentData = await client.getEntries({ content_type: 'team' });
-      const res = contentData.items;
+      const contentModel = await client.getEntries({ content_type: 'team' });
+      const contentData = contentModel.items;
+      const res = contentData.reverse();
       setData(res);
     }
 
