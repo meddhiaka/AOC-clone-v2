@@ -6,7 +6,7 @@ import * as contentful from 'contentful';
 
 export default function Event() {
   const { id } = useParams();
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
 
   useEffect(() => {
     async function fetchContentModel() {
@@ -23,8 +23,17 @@ export default function Event() {
     fetchContentModel();
   }, []);
 
+  if (!data) {
+    return <p>the fetch isn't done yet so you can't find anything in it</p>;
+  }
+
   let specificEvent = data.find((e) => e.sys.id === id);
   console.log(specificEvent);
+
+  if (!specificEvent) {
+    return <p>The thing you're trying to find in data doesn't exist</p>;
+  }
+
   return (
     <div>
       <p>{id}</p>
