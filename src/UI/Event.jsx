@@ -36,36 +36,30 @@ export default function Event() {
 
   return (
     <div>
-      <p>{id}</p>
       <Navbar />
-      <section>
-        <div className='container px-4 mx-auto mt-5 mb-14'>
-          <div className='max-w-3xl'>
-            <a
-              className='inline-block font-heading text-yellow-400 hover:text-yellow-400 mb-2'
-              href='#'
-            >
-              {specificEvent.fields.type}
-            </a>
-            <h3 className='font-heading text-3xl sm:text-4xl mb-8'>
-              {specificEvent.fields.postTitle}
-            </h3>
-          </div>
-        </div>
-        <img
-          className='block w-full h-112 object-cover'
-          src={specificEvent.fields.postCover.fields.file.url}
-          alt=''
-        />
+      <section className='py-16 md:py-24 bg-white'>
         <div className='container px-4 mx-auto'>
-          <div className='max-w-3xl mx-auto pt-12 pb-14'>
-            <p className='text-lg leading-8 mb-6'>
+          <div className='md:max-w-2xl mx-auto mb-12 text-center'>
+            <h2 className='mb-4 text-3xl md:text-5xl leading-tight text-gray-900 font-bold tracking-tighter'>
+              {specificEvent.fields.postTitle}
+            </h2>
+            <div className='inline-block py-1 px-3 text-xs leading-5 text-yellow-500 font-medium uppercase bg-yellow-100 rounded-full shadow-sm'>
+              {specificEvent.fields.type}
+            </div>
+          </div>
+          <div className='md:max-w-3xl mx-auto'>
+            <div className='mb-4 max-w-max overflow-hidden rounded-md'>
+              <img
+                src={specificEvent.fields.postCover.fields.file.url}
+                alt=''
+              />
+            </div>
+            <p className='pt-10 mb-14 text-base md:text-lg text-gray-500'>
               {specificEvent.fields.postContent}
             </p>
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
