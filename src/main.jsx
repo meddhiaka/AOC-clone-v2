@@ -9,6 +9,7 @@ import About from './UI/About';
 import NotFound from './UI/NotFound';
 import Events from './UI/Events';
 import Carousel from './UI/Sub/Carousel';
+import Event from './UI/Event';
 
 const router = createBrowserRouter([
   {
@@ -36,8 +37,8 @@ const router = createBrowserRouter([
     element: <Events />,
   },
   {
-    path: '/test',
-    element: <Carousel />,
+    path: '/events/:id',
+    element: <Event />,
   },
 ]);
 

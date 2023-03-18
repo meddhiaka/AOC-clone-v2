@@ -15,7 +15,7 @@ export default function NotFound() {
           </p>
 
           <div class='flex items-center mt-6 gap-x-3'>
-            <button class='flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2 sm:w-auto dark:hover:bg-gray-800'>
+            <button class='flex items-center justify-center w-1/2 px-5 py-2 text-sm text-white transition-colors duration-200 bg-yellow-400 border rounded-lg gap-x-2 sm:w-auto dark:hover:bg-gray-800'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
@@ -31,7 +31,7 @@ export default function NotFound() {
                 />
               </svg>
 
-              <span>
+              <span className=''>
                 <Link to='/'>Go back</Link>
               </span>
             </button>
