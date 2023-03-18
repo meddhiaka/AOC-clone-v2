@@ -63,12 +63,12 @@ export default function Navbar() {
                       Team
                     </Link>
 
-                    <a
-                      href='#'
+                    <Link
+                      to='/events'
                       className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
                     >
                       Events
-                    </a>
+                    </Link>
                     <Link
                       to='/contact'
                       className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
@@ -105,12 +105,12 @@ export default function Navbar() {
                 Team
               </Link>
 
-              <a
-                href='#'
+              <Link
+                to='/events'
                 className='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
               >
                 Events
-              </a>
+              </Link>
 
               <Link
                 to='/contact'

@@ -1,10 +1,11 @@
 import fsb from './../assets/fsb.png';
-
 import katc from './../assets/spn/4c.png';
 import eleone from './../assets/spn/eleone.png';
 import paq from './../assets/spn/paq.png';
 import stb from './../assets/spn/stb.png';
 import tst from './../assets/spn/tst.png';
+
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -22,48 +23,48 @@ export default function Footer() {
         <nav aria-label='Footer Nav' className='mt-12'>
           <ul className='flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12'>
             <li>
-              <a
+              <Link
                 className='text-gray-700 transition hover:text-gray-700/75'
-                href='#'
+                to='/'
               >
                 Home
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className='text-gray-700 transition hover:text-gray-700/75'
-                href='#'
+                to='/about'
               >
                 About
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className='text-gray-700 transition hover:text-gray-700/75'
-                href='#'
+                to='/team'
               >
                 Team
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className='text-gray-700 transition hover:text-gray-700/75'
-                href='#'
+                to='/events'
               >
                 Events
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 className='text-gray-700 transition hover:text-gray-700/75'
-                href='#'
+                to='/contact'
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -71,7 +72,7 @@ export default function Footer() {
         <ul className='mt-12 flex justify-center gap-6 md:gap-8'>
           <li>
             <a
-              href='#'
+              href='https://www.facebook.com/artofcodeclub'
               rel='noreferrer'
               target='_blank'
               className='text-gray-700 transition hover:text-gray-700/75'
@@ -94,7 +95,7 @@ export default function Footer() {
 
           <li>
             <a
-              href='#'
+              href='https://www.instagram.com/artofcodeclub'
               rel='noreferrer'
               target='_blank'
               className='text-gray-700 transition hover:text-gray-700/75'
@@ -117,26 +118,7 @@ export default function Footer() {
 
           <li>
             <a
-              href='#'
-              rel='noreferrer'
-              target='_blank'
-              className='text-gray-700 transition hover:text-gray-700/75'
-            >
-              <span className='sr-only'>Twitter</span>
-              <svg
-                className='h-6 w-6'
-                fill='currentColor'
-                viewBox='0 0 24 24'
-                aria-hidden='true'
-              >
-                <path d='M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84' />
-              </svg>
-            </a>
-          </li>
-
-          <li>
-            <a
-              href='#'
+              href='https://github.com/AOC-Club'
               rel='noreferrer'
               target='_blank'
               className='text-gray-700 transition hover:text-gray-700/75'
@@ -159,7 +141,7 @@ export default function Footer() {
 
           <li>
             <a
-              href='#'
+              href='https://www.youtube.com/channel/UCMol65GSHg0R62a_ld_Ld1g'
               rel='noreferrer'
               target='_blank'
               className='text-gray-700 transition hover:text-gray-700/75'

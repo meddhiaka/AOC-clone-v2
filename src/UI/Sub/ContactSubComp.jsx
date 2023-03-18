@@ -55,7 +55,7 @@ export default function ContactSubComp() {
               <div className='flex justify-between items-center'>
                 <label>
                   <input
-                    className='mr-2'
+                    className='mr-2 text-yellow-600'
                     type='checkbox'
                     name='terms'
                     value='1'

@@ -7,6 +7,8 @@ import Team from './UI/Team';
 import Contact from './UI/Contact';
 import About from './UI/About';
 import NotFound from './UI/NotFound';
+import Events from './UI/Events';
+import Carousel from './UI/Sub/Carousel';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
   {
     path: '*',
     element: <NotFound />,
+  },
+  {
+    path: '/events',
+    element: <Events />,
+  },
+  {
+    path: '/test',
+    element: <Carousel />,
   },
 ]);
 
