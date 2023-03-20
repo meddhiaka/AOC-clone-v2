@@ -8,7 +8,6 @@ import Contact from './UI/Contact';
 import About from './UI/About';
 import NotFound from './UI/NotFound';
 import Events from './UI/Events';
-import Carousel from './UI/Sub/Carousel';
 import Event from './UI/Event';
 
 const router = createBrowserRouter([

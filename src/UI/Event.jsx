@@ -19,6 +19,7 @@ export default function Event() {
       const contentData = contentModel.items;
       const res = contentData.reverse();
       setData(res);
+      console.log(res);
     }
     fetchContentModel();
   }, []);
@@ -28,11 +29,14 @@ export default function Event() {
   }
 
   let specificEvent = data.find((e) => e.sys.id === id);
-  console.log(specificEvent);
 
   if (!specificEvent) {
     return <p>The thing you're trying to find in data doesn't exist</p>;
   }
+
+  const cData = specificEvent.fields.carousel,
+    yesCarousel = specificEvent.fields.yesCarousel;
+  cData.map((e) => console.log(e.fields.file.url));
 
   return (
     <div>
@@ -47,15 +51,19 @@ export default function Event() {
               {specificEvent.fields.type}
             </div>
           </div>
-          <div className='md:max-w-3xl mx-auto'>
-            <div className='mb-4 max-w-max overflow-hidden rounded-md'>
-              <img
-                src={specificEvent.fields.postCover.fields.file.url}
-                alt=''
-              />
+          <div className='flex md:flex-row flex-col justify-center'>
+            <div className='md:basis-1/4 max-w-max overflow-hidden rounded-md text-center'>
+              <div className='w-full h-full flex flex-row items-center'>
+                <img
+                  src={specificEvent.fields.postCover.fields.file.url}
+                  alt=''
+                />
+              </div>
             </div>
-            <p className='pt-10 mb-14 text-base md:text-lg text-gray-500'>
-              {specificEvent.fields.postContent}
+            <p className='md:basis-1/2 text-base md:text-lg text-gray-500'>
+              <div className='w-full h-full md:m-10 flex flex-row items-center md:text-xl'>
+                <p className=''>{specificEvent.fields.postContent}</p>
+              </div>
             </p>
           </div>
         </div>

@@ -11,12 +11,14 @@
   "dependencies": {
     "@headlessui/react": "^1.7.12",
     "@heroicons/react": "^2.0.16",
+    "bootstrap": "^5.2.3",
     "classnames": "^2.3.2",
     "contentful": "^9.3.3",
     "flowbite": "^1.6.3",
     "flowbite-react": "^0.3.8",
     "flowbite-typography": "^1.0.3",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.0"
   },
