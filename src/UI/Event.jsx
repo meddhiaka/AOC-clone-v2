@@ -3,6 +3,9 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import { useEffect, useState } from 'react';
 import * as contentful from 'contentful';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from 'swiper';
+import 'swiper/swiper-bundle.min.css';
 
 export default function Event() {
   const { id } = useParams();
@@ -42,8 +45,8 @@ export default function Event() {
     <div>
       <Navbar />
       <section className='py-16 md:py-24 bg-white'>
-        <div className='container px-4 mx-auto'>
-          <div className='md:max-w-2xl mx-auto mb-12 text-center'>
+        <div className=' px-4 mx-auto '>
+          <div className='md:max-w-2xl mx-auto text-center mb-10'>
             <h2 className='mb-4 text-3xl md:text-5xl leading-tight text-gray-900 font-bold tracking-tighter'>
               {specificEvent.fields.postTitle}
             </h2>
@@ -61,11 +64,36 @@ export default function Event() {
               </div>
             </div>
             <p className='md:basis-1/2 text-base md:text-lg text-gray-500'>
-              <div className='w-full h-full md:m-10 flex flex-row items-center md:text-xl'>
+              <div className='w-full h-full md:m-10 flex flex-row items-center mt-10 text-xl'>
                 <p className=''>{specificEvent.fields.postContent}</p>
               </div>
             </p>
           </div>
+        </div>
+        <div className='mt-10 mb-10 md:ml-[350px] md:mr-[350px]'>
+          {yesCarousel && (
+            <Swiper
+              modules={[Navigation, Pagination, Scrollbar, A11y, EffectCube]}
+              spaceBetween={50}
+              slidesPerView={3}
+              navigation
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+              effect={'cube'}
+              cubeEffect={{
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+              }}
+            >
+              {cData.map((slide, k) => (
+                <SwiperSlide key={slide.k}>
+                  <img src={slide.fields.file.url} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
         </div>
       </section>
       <Footer />
