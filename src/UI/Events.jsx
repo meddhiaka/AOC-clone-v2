@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 
 export default function Events() {
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "AOC Events"
   })
   return (

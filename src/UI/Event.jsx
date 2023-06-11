@@ -12,6 +12,7 @@ export default function Event() {
   const [data, setData] = useState();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     async function fetchContentModel() {
       const client = contentful.createClient({
         space: import.meta.env.VITE_CONTENTFUL_SPACE,

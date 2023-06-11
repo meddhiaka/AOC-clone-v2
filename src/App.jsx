@@ -8,6 +8,7 @@ import Navbar from './UI/Navbar';
 export default function App() {
   useEffect(() => {
     document.title = "AOC Clone v2"
+    window.scrollTo(0, 0);
   })
   return (
     <div>
