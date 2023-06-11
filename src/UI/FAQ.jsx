@@ -18,8 +18,8 @@ export default function FAQ() {
             <div className='max-w-lg'>
               <h2 className='mb-12 lg:mb-20 text-5xl lg:text-7xl lg:text-center font-bold font-heading text-yellow-400'>
                 Who <br />
-                We
-                <br /> Are?
+                Are
+                <br /> we?
               </h2>
               <div className='flex items-center mb-8 pb-14 border-b border-gray-500'>
                 <div className='max-w-sm'>
