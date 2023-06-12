@@ -19,7 +19,7 @@ export default function FAQ() {
               <h2 className='mb-12 lg:mb-20 text-5xl lg:text-7xl lg:text-center font-bold font-heading text-yellow-400'>
                 Who <br />
                 Are
-                <br /> we?
+                <br /> We?
               </h2>
               <div className='flex items-center mb-8 pb-14 border-b border-gray-500'>
                 <div className='max-w-sm'>

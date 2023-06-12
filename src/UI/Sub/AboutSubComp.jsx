@@ -2,8 +2,8 @@ import AboutPic from './../../assets/AocAbout.jpg';
 import LogoConcept from './../../assets/LogoConcept.jpg';
 import { useState } from 'react';
 
-const Item = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Item = ({ title, children, isOpenByDefault }) => {
+  const [isOpen, setIsOpen] = useState(isOpenByDefault);
 
   return (
     <div className='border-b'>
@@ -49,139 +49,139 @@ export default function AboutSubComp() {
           Our team story
         </span>
         <h2 className='font-heading text-4xl md:text-5xl text-gray-900 font-black tracking-tight'>
-          Top revelvant questions
+          Top relevant questions
         </h2>
       </div>
       <div class='max-w-xl sm:mx-auto lg:max-w-2xl'>
         <div class='space-y-4'>
-          <Item title='AOC Objectives'>
-            <ul class='mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400'>
-              <li class='flex items-center space-x-3'>
-                <svg
-                  class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    fill-rule='evenodd'
-                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'
-                  ></path>
-                </svg>
-                <span>
-                  Collaboration between IT students in order to learn and excel
-                  in Computer Science field.
-                </span>
-              </li>
-              <li class='flex items-center space-x-3'>
-                <svg
-                  class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    fill-rule='evenodd'
-                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'
-                  ></path>
-                </svg>
-                <span>
-                  Essential training and workshops to all students to establish
-                  basic knowledge in programming and coding.
-                </span>
-              </li>
-              <li class='flex items-center space-x-3'>
-                <svg
-                  class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    fill-rule='evenodd'
-                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'
-                  ></path>
-                </svg>
-                <span>
-                  Simulation of the real-world challenges by applying the
-                  acquired skills.
-                </span>
-              </li>
-            </ul>
-          </Item>
-          <Item title='AOC Concept'>
-            <ul class='mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400'>
-              <li class='flex items-center space-x-3'>
-                <svg
-                  class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    fill-rule='evenodd'
-                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'
-                  ></path>
-                </svg>
-                <span>Code is systematic, organized and scientific.</span>
-              </li>
-              <li class='flex items-center space-x-3'>
-                <svg
-                  class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    fill-rule='evenodd'
-                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'
-                  ></path>
-                </svg>
-                <span>Art is freedom, expressiveness and ambiguity.</span>
-              </li>
-              <li class='flex items-center space-x-3'>
-                <svg
-                  class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    fill-rule='evenodd'
-                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'
-                  ></path>
-                </svg>
-                <span>
-                  Two topics that may seem completely opposite but the
-                  intersection between them can be very interesting. Solving
-                  problems with code involves an immense amount of creativity.
-                  When a developer architects the structure of a program and
-                  infuses each step of the process with specific design choices,
-                  they are being creative. Any software developer has
-                  experienced code that is beautiful. When code is simple,
-                  intuitive and logical, it evokes a sense of harmony.
-                </span>
-              </li>
-            </ul>
-            <img
-              class='h-auto max-w-xl rounded-lg shadow-md shadow-yellow-400 w-full'
-              src={AboutPic}
-            />
-          </Item>
-          <Item title='Logo Concept'>
-            <img
-              src={LogoConcept}
-              alt=''
-              className='h-auto max-w-xl rounded-lg shadow-md shadow-yellow-400 w-full'
-            />
-          </Item>
-        </div>
+            <Item title='AOC Objectives' isOpenByDefault={true}>
+              <ul class='mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400'>
+                <li class='flex items-center space-x-3'>
+                  <svg
+                    class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      fill-rule='evenodd'
+                      d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                      clip-rule='evenodd'
+                    ></path>
+                  </svg>
+                  <span>
+                    Collaboration between IT students in order to learn and excel
+                    in Computer Science field.
+                  </span>
+                </li>
+                <li class='flex items-center space-x-3'>
+                  <svg
+                    class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      fill-rule='evenodd'
+                      d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                      clip-rule='evenodd'
+                    ></path>
+                  </svg>
+                  <span>
+                    Essential training and workshops to all students to establish
+                    basic knowledge in programming and coding.
+                  </span>
+                </li>
+                <li class='flex items-center space-x-3'>
+                  <svg
+                    class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      fill-rule='evenodd'
+                      d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                      clip-rule='evenodd'
+                    ></path>
+                  </svg>
+                  <span>
+                    Simulation of the real-world challenges by applying the
+                    acquired skills.
+                  </span>
+                </li>
+              </ul>
+            </Item>
+            <Item title='AOC Concept'>
+              <ul class='mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400'>
+                <li class='flex items-center space-x-3'>
+                  <svg
+                    class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      fill-rule='evenodd'
+                      d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                      clip-rule='evenodd'
+                    ></path>
+                  </svg>
+                  <span>Code is systematic, organized and scientific.</span>
+                </li>
+                <li class='flex items-center space-x-3'>
+                  <svg
+                    class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      fill-rule='evenodd'
+                      d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                      clip-rule='evenodd'
+                    ></path>
+                  </svg>
+                  <span>Art is freedom, expressiveness and ambiguity.</span>
+                </li>
+                <li class='flex items-center space-x-3'>
+                  <svg
+                    class='flex-shrink-0 w-5 h-5 text-yellow-500 dark:text-yellow-400'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      fill-rule='evenodd'
+                      d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                      clip-rule='evenodd'
+                    ></path>
+                  </svg>
+                  <span>
+                    Two topics that may seem completely opposite but the
+                    intersection between them can be very interesting. Solving
+                    problems with code involves an immense amount of creativity.
+                    When a developer architects the structure of a program and
+                    infuses each step of the process with specific design choices,
+                    they are being creative. Any software developer has
+                    experienced code that is beautiful. When code is simple,
+                    intuitive and logical, it evokes a sense of harmony.
+                  </span>
+                </li>
+              </ul>
+              <img
+                class='h-auto max-w-xl rounded-lg shadow-md shadow-yellow-400 w-full'
+                src={AboutPic}
+              />
+            </Item>
+            <Item title='Logo Concept'>
+              <img
+                src={LogoConcept}
+                alt=''
+                className='h-auto max-w-xl rounded-lg shadow-md shadow-yellow-400 w-full'
+              />
+            </Item>
+          </div>
       </div>
     </div>
   );
