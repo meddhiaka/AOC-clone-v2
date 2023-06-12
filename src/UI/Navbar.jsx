@@ -15,6 +15,8 @@ export default function Navbar() {
 
   const linkStyle = 'text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium';
   const activeLinkStyle = 'text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+  const linkStyleMobile = 'text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
+  const activeLinkStyleMobile ='bg-yellow-500 text-white block rounded-md px-3 py-2 text-base font-medium'
   return (
     <Disclosure as='nav' className='bg-gray-800'>
       {({ open }) => (
@@ -53,35 +55,34 @@ export default function Navbar() {
                   <div className='flex space-x-4'>
                     <Link
                       to='/'
-                      className='text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                      className={activeUrl === '/' ? activeLinkStyle : linkStyle}
                     >
                       Home
                     </Link>
 
                     <Link
                       to='/about'
-                      className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                      className={activeUrl === '/about' ? activeLinkStyle : linkStyle}
                     >
                       About
                     </Link>
 
                     <Link
                       to='/team'
-                      className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                      className={activeUrl === '/team' ? activeLinkStyle : linkStyle}
                     >
                       Team
                     </Link>
 
                     <Link
                       to='/events'
-                      className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                      className={activeUrl === '/events' ? activeLinkStyle : linkStyle}
                     >
                       Events
                     </Link>
                     <Link
                       to='/contact'
-                      className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
-                      activeClassName="active-link"
+                      className={activeUrl === '/contact' ? activeLinkStyle : linkStyle}
                     >
                       Contact
                     </Link>
@@ -95,36 +96,35 @@ export default function Navbar() {
             <div className='space-y-1 px-2 pt-2 pb-3'>
               <Link
                 to='/'
-                className='bg-yellow-500 text-white block rounded-md px-3 py-2 text-base font-medium'
-                aria-current='page'
+                className={activeUrl === '/' ? activeLinkStyleMobile : linkStyleMobile}
               >
                 Home
               </Link>
 
               <Link
                 to='/about'
-                className='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
+                className={activeUrl === '/about' ? activeLinkStyleMobile : linkStyleMobile}
               >
                 About
               </Link>
 
               <Link
                 to='/team'
-                className='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
+                className={activeUrl === '/team' ? activeLinkStyleMobile : linkStyleMobile}
               >
                 Team
               </Link>
 
               <Link
                 to='/events'
-                className='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
+                className={activeUrl === '/events' ? activeLinkStyleMobile : linkStyleMobile}
               >
                 Events
               </Link>
 
               <Link
                 to='/contact'
-                className='text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
+                className={activeUrl === '/contact' ? activeLinkStyleMobile : linkStyleMobile}
               >
                 Contact
               </Link>
