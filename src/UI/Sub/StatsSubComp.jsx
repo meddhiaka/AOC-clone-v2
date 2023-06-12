@@ -3,12 +3,12 @@ import './../../App.css'
 export default function StatsSubComp() {
   return (
     <section className="py-20 bg-indigo-200">
+      <div className='mb-16 max-w-xl mx-auto text-center'>
+        <h2 className='font-heading text-4xl md:text-5xl text-gray-900 font-black tracking-tight'>
+          Some numbers...
+        </h2>
+      </div>
       <div className="container px-4 mx-auto">
-        <div classNameName='mb-16 max-w-xl mx-auto text-center'>
-          <h2 className='font-heading text-4xl md:text-5xl text-gray-900 font-black tracking-tight'>
-            Some numbers...
-          </h2>
-        </div>
         <div className="flex flex-wrap items-center -mx-4 -mb-8">
           <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 text-center">
             <span className="flex items-center justify-center w-24 h-24 mb-8 mx-auto">
