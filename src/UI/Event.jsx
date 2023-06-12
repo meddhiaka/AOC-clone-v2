@@ -6,6 +6,7 @@ import * as contentful from 'contentful';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
+import { Helmet } from 'react-helmet';
 
 export default function Event() {
   const { id } = useParams();
@@ -34,7 +35,6 @@ export default function Event() {
   }
 
   let specificEvent = data.find((e) => e.sys.id === id);
-  document.title = specificEvent.fields.postTitle;
 
 
   if (!specificEvent) {
@@ -47,6 +47,9 @@ export default function Event() {
 
   return (
     <div>
+      <Helmet>
+        <title>AOC - {specificEvent.fields.postTitle}</title>
+      </Helmet>
       <Navbar />
       <section className='py-16 md:py-24 bg-white'>
         <div className=' px-4 mx-auto '>

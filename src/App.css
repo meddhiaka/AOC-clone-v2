@@ -5,3 +5,7 @@
 .swiper-button-next {
   color: #f6e05e !important;
 }
+
+.active-link {
+  font-size: large;
+}

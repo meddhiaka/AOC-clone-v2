@@ -1,10 +1,20 @@
 import Logo from './../assets/aocLogo.png';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import './../App.css'
 
 export default function Navbar() {
+  const url = useLocation();
+  const [activeUrl, setActiveUrl] = useState('');
+
+  useEffect(() => {
+    setActiveUrl(url.pathname);
+  }, [url.pathname]);
+
+  const linkStyle = 'text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium';
+  const activeLinkStyle = 'text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
   return (
     <Disclosure as='nav' className='bg-gray-800'>
       {({ open }) => (
@@ -44,7 +54,6 @@ export default function Navbar() {
                     <Link
                       to='/'
                       className='text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
-                      aria-current='page'
                     >
                       Home
                     </Link>
@@ -72,6 +81,7 @@ export default function Navbar() {
                     <Link
                       to='/contact'
                       className='text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
+                      activeClassName="active-link"
                     >
                       Contact
                     </Link>
