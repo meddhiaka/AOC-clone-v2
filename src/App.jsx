@@ -5,6 +5,7 @@ import Footer from './UI/Footer';
 import MainVideo from './UI/MainVideo';
 import Navbar from './UI/Navbar';
 import {Helmet} from 'react-helmet';
+import StatsSubComp from './UI/Sub/StatsSubComp';
 
 export default function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function App() {
       <Navbar />
       <MainVideo />
       <FAQ />
+      <StatsSubComp />
       <Footer />
     </div>
   );

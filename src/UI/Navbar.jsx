@@ -34,13 +34,17 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
+              <a href="https://bit.ly/3N5TXrr" className='bg-yellow-600 text-gray-200  rounded-md px-3 py-2 text-sm font-medium absolute right-3 top-3 sm:hidden'>
+                      Join Us
+              </a>
+              
               <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
                 <div className='flex flex-shrink-0 items-center'>
                   <Link to='/'>
                     <img
                       className='block h-8 w-auto lg:hidden'
                       src={Logo}
-                      alt='Your Company'
+                      alt='Art Of Code'
                     />
                   </Link>
                   <Link to='/'>
@@ -86,7 +90,7 @@ export default function Navbar() {
                     >
                       Contact
                     </Link>
-                    <a href="./../../ds.pdf" className='bg-yellow-600 text-gray-200 block rounded-md px-3 py-2 text-sm font-medium'>
+                    <a href="https://bit.ly/3N5TXrr" className='bg-yellow-600 text-gray-200 block rounded-md px-3 py-2 text-sm font-medium'>
                       Join Us
                     </a>
                   </div>
