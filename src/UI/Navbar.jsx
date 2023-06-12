@@ -34,7 +34,7 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <a href="https://bit.ly/3N5TXrr" className='bg-yellow-600 text-gray-200  rounded-md px-3 py-2 text-sm font-medium absolute right-3 top-3 sm:hidden'>
+              <a href="https://bit.ly/3N5TXrr" target="_blank" className='bg-yellow-600 text-gray-200  rounded-md px-3 py-2 text-sm font-medium absolute right-3 top-3 sm:hidden'>
                       Join Us
               </a>
               
@@ -90,7 +90,7 @@ export default function Navbar() {
                     >
                       Contact
                     </Link>
-                    <a href="https://bit.ly/3N5TXrr" className='bg-yellow-600 text-gray-200 block rounded-md px-3 py-2 text-sm font-medium'>
+                    <a href="https://bit.ly/3N5TXrr" target="_blank" className='bg-yellow-600 text-gray-200 block rounded-md px-3 py-2 text-sm font-medium'>
                       Join Us
                     </a>
                   </div>
