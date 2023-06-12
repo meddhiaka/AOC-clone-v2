@@ -86,6 +86,9 @@ export default function Navbar() {
                     >
                       Contact
                     </Link>
+                    <a href="./../../ds.pdf" className='bg-yellow-600 text-gray-200 block rounded-md px-3 py-2 text-sm font-medium'>
+                      Join Us
+                    </a>
                   </div>
                 </div>
               </div>
