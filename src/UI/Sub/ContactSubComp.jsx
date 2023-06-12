@@ -12,7 +12,7 @@ export default function ContactSubComp() {
             <div className='mt-10 lg:mt-24'>
               <div className='mb-10 leading-relaxed'>
                 <h4 className='text-sm text-gray-400 font-semibold'>E-mail</h4>
-                <p>artofcode@email??</p>
+                <p>artofcodeclub@gmail.com</p>
               </div>
               <div className='mb-10 leading-relaxed'>
                 <h4 className='text-sm text-gray-400 font-semibold'>Address</h4>
@@ -52,18 +52,7 @@ export default function ContactSubComp() {
                 ></textarea>
               </div>
 
-              <div className='flex justify-between items-center'>
-                <label>
-                  <input
-                    className='mr-2 text-yellow-600'
-                    type='checkbox'
-                    name='terms'
-                    value='1'
-                  />
-                  <span className='text-sm font-semibold'>
-                    I agree to terms and conditions.
-                  </span>
-                </label>
+              <div className='flex justify-end'>
                 <button
                   className='py-4 px-8 text-sm text-white font-semibold leading-none bg-gray-800 hover:bg-gray-900 rounded'
                   type='submit'
