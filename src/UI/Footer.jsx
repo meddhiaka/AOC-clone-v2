@@ -1,7 +1,8 @@
 import fsb from './../assets/fsb.png';
 import katc from './../assets/spn/4c.png';
 import eleone from './../assets/spn/eleone.png';
-import paq from './../assets/spn/paq.png';
+import natilait from './../assets/spn/natilait.png'
+import joba from './../assets/spn/joba.png'
 import stb from './../assets/spn/stb.png';
 import tst from './../assets/spn/tst.png';
 
@@ -9,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer aria-label='Site Footer' className='bg-gray-100'>
+    <footer aria-label='Site Footer' className='bg-gray-100 overflow-hidden'>
       <div className='mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8'>
         <div className='flex justify-center text-teal-600'>
           <img src={fsb} className='w-52' />
@@ -24,7 +25,7 @@ export default function Footer() {
           <ul className='flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12'>
             <li>
               <Link
-                className='text-gray-700 transition hover:text-gray-700/75'
+                className='text-gray-700 transition text-sm hover:text-gray-700/75'
                 to='/'
               >
                 Home
@@ -33,16 +34,16 @@ export default function Footer() {
 
             <li>
               <Link
-                className='text-gray-700 transition hover:text-gray-700/75'
-                to='/about'
+                className='text-gray-700 transition text-sm hover:text-gray-700/75'
+                to='/Sponsors'
               >
-                About
+                Sponsors
               </Link>
             </li>
 
             <li>
               <Link
-                className='text-gray-700 transition hover:text-gray-700/75'
+                className='text-gray-700 transition text-sm hover:text-gray-700/75'
                 to='/team'
               >
                 Team
@@ -51,7 +52,7 @@ export default function Footer() {
 
             <li>
               <Link
-                className='text-gray-700 transition hover:text-gray-700/75'
+                className='text-gray-700 transition text-sm hover:text-gray-700/75'
                 to='/events'
               >
                 Events
@@ -60,7 +61,7 @@ export default function Footer() {
 
             <li>
               <Link
-                className='text-gray-700 transition hover:text-gray-700/75'
+                className='text-gray-700 transition text-sm hover:text-gray-700/75'
                 to='/contact'
               >
                 Contact
@@ -165,10 +166,13 @@ export default function Footer() {
             <img src={katc} className='w-11' alt='' />
           </li>
           <li>
-            <img src={eleone} className='w-11' alt='' />
+            <img src={eleone} className='w-24 ' alt='' />
           </li>
           <li>
-            <img src={paq} className='w-11' alt='' />
+            <img src={joba} className='w-11' alt='' />
+          </li>
+          <li>
+            <img src={natilait} className='w-11' alt='' />
           </li>
           <li>
             <img src={tst} className='w-11' alt='' />

@@ -16,7 +16,7 @@ export default function Navbar() {
   const linkStyle = 'text-gray-300 hover:text-yellow-300 rounded-md px-3 py-2 text-sm font-medium';
   const activeLinkStyle = 'text-yellow-300 rounded-md px-3 py-2 text-sm font-medium'
   const linkStyleMobile = 'text-gray-300 hover:bg-yellow-500 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
-  const activeLinkStyleMobile ='bg-yellow-500 text-white block rounded-md px-3 py-2 text-base font-medium'
+  const activeLinkStyleMobile = 'bg-yellow-500 text-white block rounded-md px-3 py-2 text-base font-medium'
   return (
     <Disclosure as='nav' className='bg-gray-800'>
       {({ open }) => (
@@ -35,9 +35,9 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <a href="https://bit.ly/3N5TXrr" target="_blank" className='bg-yellow-600 text-gray-200  rounded-md px-3 py-2 text-sm font-medium absolute right-3 top-3 sm:hidden'>
-                      Join Us
+                Join Us
               </a>
-              
+
               <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
                 <div className='flex flex-shrink-0 items-center'>
                   <Link to='/'>
@@ -65,10 +65,10 @@ export default function Navbar() {
                     </Link>
 
                     <Link
-                      to='/about'
-                      className={activeUrl === '/about' ? activeLinkStyle : linkStyle}
+                      to='/sponsors'
+                      className={activeUrl === '/sponsors' ? activeLinkStyle : linkStyle}
                     >
-                      About
+                      Sponsors
                     </Link>
 
                     <Link
@@ -109,10 +109,10 @@ export default function Navbar() {
               </Link>
 
               <Link
-                to='/about'
-                className={activeUrl === '/about' ? activeLinkStyleMobile : linkStyleMobile}
+                to='/sponsors'
+                className={activeUrl === '/sponsors' ? activeLinkStyleMobile : linkStyleMobile}
               >
-                About
+                Sponsors
               </Link>
 
               <Link

@@ -5,7 +5,7 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Team from './UI/Team';
 import Contact from './UI/Contact';
-import About from './UI/About';
+import Sponsors from './UI/Sponsors';
 import NotFound from './UI/NotFound';
 import Events from './UI/Events';
 import Event from './UI/Event';
@@ -24,8 +24,8 @@ const router = createBrowserRouter([
     element: <Contact />,
   },
   {
-    path: '/about',
-    element: <About />,
+    path: '/sponsors',
+    element: <Sponsors />,
   },
   {
     path: '*',

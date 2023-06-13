@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import './App.css';
-import FAQ from './UI/FAQ';
+import Hello from './UI/Hello';
 import Footer from './UI/Footer';
 import MainVideo from './UI/MainVideo';
 import Navbar from './UI/Navbar';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import StatsSubComp from './UI/Sub/StatsSubComp';
+import FAQ from './UI/FAQ';
 
 export default function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function App() {
       </Helmet>
       <Navbar />
       <MainVideo />
+      <Hello />
       <FAQ />
       <StatsSubComp />
       <Footer />
