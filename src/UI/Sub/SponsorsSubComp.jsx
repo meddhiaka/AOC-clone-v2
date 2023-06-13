@@ -194,6 +194,26 @@ export default function SponsorsSubComp() {
                 </div>
             </div>
 
+            <section>
+                <div class="relative items-center w-full px-5  mx-auto md:px-12 lg:px-16 max-w-7xl">
+                    <div class="max-w-xl mx-auto text-center lg:p-10">
+                        <div>
+                            <p class="max-w-xl mt-4 text-lg tracking-tight font-bold text-gray-600">
+                                Do you want more information?
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-3 mt-5 lg:flex-row lg:justify-center">
+                            <a class="inline-flex items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-gray-900 border-2 border-gray-900 rounded-full hover:bg-transparent hover:border-gray-900 hover:text-gray-900 focus:outline-none lg:w-auto" href="./../../ds.pdf">
+                                <span class="flex flex-col items-start ml-4 leading-none">
+                                    <span class="mb-1 text-xs">Check out our</span>
+                                    <span class="font-medium title-font">Sponsoring Folder</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     )
 }
