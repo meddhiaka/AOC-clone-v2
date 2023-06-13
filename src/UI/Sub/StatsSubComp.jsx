@@ -42,7 +42,7 @@ export default function StatsSubComp() {
                 trigger="loop"
                 delay="3000"
                 colors="primary:#916f10,secondary:#110a5c"
-                style={{ width: '450px', height: '450px' }}>
+                style={{ width: '450px', height: '450px', transform: 'rotate(180deg) scaleX(-1)' }}>
               </lord-icon>
             </span>
             <h3 className="mb-4 text-2xl font-semibold font-heading">1.2K+</h3>
