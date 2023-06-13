@@ -35,7 +35,7 @@ export default function Footer() {
             <li>
               <Link
                 className='text-gray-700 transition text-sm hover:text-gray-700/75'
-                to='/Sponsors'
+                to='/sponsors'
               >
                 Sponsors
               </Link>
