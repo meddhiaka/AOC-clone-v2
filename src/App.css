@@ -10,6 +10,10 @@
   font-size: large;
 }
 
+.discoverBtn {
+  transform: rotate(180deg);
+}
+
 .st0{
   fill:#fdba74;
 }

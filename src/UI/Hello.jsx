@@ -34,9 +34,9 @@ export default function Hello() {
                 className='flex items-center justify-end font-bold text-gray-200'
                 href='#'
               >
-                <Link to='/about'>
+                <a href="#FAQ">
                   <span>Discover our team story</span>
-                </Link>
+                </a>
                 <span className='ml-5'>
                   <svg
                     width='19'
@@ -44,6 +44,7 @@ export default function Hello() {
                     viewbox='0 0 19 20'
                     fill='none'
                     xmlns='http://www.w3.org/2000/svg'
+                    className='discoverBtn'
                   >
                     <path
                       d='M18.7387 1.47293L18.7387 10.93L17.5565 10.93L17.5565 2.89739L0.835337 19.6245L0.00193592 18.7911L16.7231 2.064L9.28164 2.064L9.28164 0.881867L18.1476 0.881866C18.4741 0.881866 18.7387 1.14648 18.7387 1.47293Z'
