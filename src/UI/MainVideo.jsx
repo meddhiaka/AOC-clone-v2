@@ -2,7 +2,7 @@ import Video from './../assets/aocVideo.mp4';
 
 export default function MainVideo() {
   return (
-    <div>
+    <div className='block lg:hidden'>
       <video
         src={Video}
         autoPlay

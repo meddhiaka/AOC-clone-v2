@@ -3,20 +3,29 @@ import * as contentful from 'contentful';
 import { Link } from 'react-router-dom';
 
 export default function EventsSubComp() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    async function fetchContentModel() {
-      const client = contentful.createClient({
-        space: import.meta.env.VITE_CONTENTFUL_SPACE,
-        accessToken: import.meta.env.VITE_CONTENTFUL_PRIVATE_API_KEY,
-      });
+  const [eventsData, setEventsData] = useState([]);
 
-      const contentModel = await client.getEntries({ content_type: 'posts' });
-      const contentData = contentModel.items;
-      const res = contentData.reverse();
-      console.log(res);
-      setData(res);
-    }
+  useEffect(() => {
+    const fetchContentModel = async () => {
+      try {
+        const client = contentful.createClient({
+          space: import.meta.env.VITE_CONTENTFUL_SPACE,
+          accessToken: import.meta.env.VITE_CONTENTFUL_PRIVATE_API_KEY,
+        });
+
+        const contentModel = await client.getEntries({ content_type: 'posts' });
+        const contentData = contentModel.items.reverse();
+        // console.log('content data :')
+        // console.log(contentData);
+        const inactiveEvents = contentData.filter(event => event.fields.activeEvent === false);
+        console.log('after filter function');
+        setEventsData(inactiveEvents);
+        console.log("inactive Events :");
+        console.log(inactiveEvents);
+      } catch (error) {
+        console.error('Error fetching content model:', error);
+      }
+    };
 
     fetchContentModel();
   }, []);
@@ -33,7 +42,7 @@ export default function EventsSubComp() {
           </h2>
         </div>
         <div className='flex flex-wrap -m-4'>
-          {data.map((e, k) => (
+          {eventsData.map((e, k) => (
             <div className='p-4 md:w-1/3' key={k}>
               <div className='h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
                 <img
